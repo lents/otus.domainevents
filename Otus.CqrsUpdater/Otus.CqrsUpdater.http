@@ -1,0 +1,6 @@
+@Otus.CqrsUpdater_HostAddress = http://localhost:5015
+
+GET {{Otus.CqrsUpdater_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

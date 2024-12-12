@@ -1,0 +1,6 @@
+@Otus.Cqrs.Reader_HostAddress = http://localhost:5107
+
+GET {{Otus.Cqrs.Reader_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

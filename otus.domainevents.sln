@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DomainEventsWithMediatR", "DomainEventsWithMediatR\DomainEventsWithMediatR.csproj", "{C29A0FBF-CBEC-4F95-AD89-0139FA5D5AC0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MaualDomainEvents", "MaualDomainEvents\MaualDomainEvents.csproj", "{2688927A-4AB6-4760-A9B3-A4DC5E336CB3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CQRS", "CQRS", "{F911C843-C082-4DB6-87BE-5B3A6E6F4ABC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Otus.Cqrs.RabbitMq", "Otus.Cqrs.RabbitMq\Otus.Cqrs.RabbitMq.csproj", "{CD28E95B-0F28-4757-AE5B-18BA41AE9008}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Otus.Cqrs.Reader", "Otus.Cqrs.Reader\Otus.Cqrs.Reader.csproj", "{CC102CFB-2EFD-4533-83F6-3A056CAE9C6B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Otus.Cqrs.Commander", "Otus.CqrsUpdater\Otus.Cqrs.Commander.csproj", "{700ADEDB-E6DA-47E0-8CD8-634C5E28DF94}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C29A0FBF-CBEC-4F95-AD89-0139FA5D5AC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C29A0FBF-CBEC-4F95-AD89-0139FA5D5AC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C29A0FBF-CBEC-4F95-AD89-0139FA5D5AC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C29A0FBF-CBEC-4F95-AD89-0139FA5D5AC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2688927A-4AB6-4760-A9B3-A4DC5E336CB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2688927A-4AB6-4760-A9B3-A4DC5E336CB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2688927A-4AB6-4760-A9B3-A4DC5E336CB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2688927A-4AB6-4760-A9B3-A4DC5E336CB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD28E95B-0F28-4757-AE5B-18BA41AE9008}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD28E95B-0F28-4757-AE5B-18BA41AE9008}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD28E95B-0F28-4757-AE5B-18BA41AE9008}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD28E95B-0F28-4757-AE5B-18BA41AE9008}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC102CFB-2EFD-4533-83F6-3A056CAE9C6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC102CFB-2EFD-4533-83F6-3A056CAE9C6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC102CFB-2EFD-4533-83F6-3A056CAE9C6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC102CFB-2EFD-4533-83F6-3A056CAE9C6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{700ADEDB-E6DA-47E0-8CD8-634C5E28DF94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{700ADEDB-E6DA-47E0-8CD8-634C5E28DF94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{700ADEDB-E6DA-47E0-8CD8-634C5E28DF94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{700ADEDB-E6DA-47E0-8CD8-634C5E28DF94}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CD28E95B-0F28-4757-AE5B-18BA41AE9008} = {F911C843-C082-4DB6-87BE-5B3A6E6F4ABC}
+		{CC102CFB-2EFD-4533-83F6-3A056CAE9C6B} = {F911C843-C082-4DB6-87BE-5B3A6E6F4ABC}
+		{700ADEDB-E6DA-47E0-8CD8-634C5E28DF94} = {F911C843-C082-4DB6-87BE-5B3A6E6F4ABC}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F21670C1-B94E-43B8-85CD-A918EB181AFE}
+	EndGlobalSection
+EndGlobal
