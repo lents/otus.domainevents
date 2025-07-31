@@ -4,7 +4,7 @@ using System;
 
 namespace TaskManagementSystem.Domain.Entities;
 
-public class Task : Entity
+public class TaskDto : Entity
 {
     public Guid Id { get; private set; }
     public string Title { get; private set; }
@@ -14,7 +14,7 @@ public class Task : Entity
     public bool IsDeleted { get; private set; }
 
 
-    private Task(Guid id, string title, string description, DateTime dueDate)
+    private TaskDto(Guid id, string title, string description, DateTime dueDate)
     {
         Id = id;
         Title = title;
@@ -24,9 +24,9 @@ public class Task : Entity
         IsDeleted = false;
     }
 
-    public static Task Create(string title, string description, DateTime dueDate)
+    public static TaskDto Create(string title, string description, DateTime dueDate)
     {
-        var task = new Task(Guid.NewGuid(), title, description, dueDate);
+        var task = new TaskDto(Guid.NewGuid(), title, description, dueDate);
         task.AddDomainEvent(new TaskCreatedEvent(task.Id));
         return task;
     }

@@ -9,26 +9,26 @@ namespace TaskManagementSystem.Infrastructure.Repositories;
 
 public class TaskRepository : ITaskRepository
 {
-    private readonly List<Task> _tasks = new();
+    private readonly List<TaskDto> _tasks = new();
 
-    public Task<Task> GetByIdAsync(Guid id)
+    public Task<TaskDto> GetByIdAsync(Guid id)
     {
         var task = _tasks.FirstOrDefault(t => t.Id == id);
         return Task.FromResult(task);
     }
 
-    public Task<IReadOnlyList<Task>> GetAllAsync()
+    public Task<IReadOnlyList<TaskDto>> GetAllAsync()
     {
-        return Task.FromResult<IReadOnlyList<Task>>(_tasks);
+        return Task.FromResult<IReadOnlyList<TaskDto>>(_tasks);
     }
 
-    public Task AddAsync(Task entity)
+    public Task AddAsync(TaskDto entity)
     {
         _tasks.Add(entity);
         return Task.CompletedTask;
     }
 
-    public Task UpdateAsync(Task entity)
+    public Task UpdateAsync(TaskDto entity)
     {
         var index = _tasks.FindIndex(t => t.Id == entity.Id);
         if (index != -1)
@@ -38,7 +38,7 @@ public class TaskRepository : ITaskRepository
         return Task.CompletedTask;
     }
 
-    public Task DeleteAsync(Task entity)
+    public Task DeleteAsync(TaskDto entity)
     {
         var existingTask = _tasks.FirstOrDefault(t => t.Id == entity.Id);
         if (existingTask != null)

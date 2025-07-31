@@ -16,13 +16,13 @@ public class MarkTaskAsCompletedCommandHandler : IRequestHandler<MarkTaskAsCompl
         _publisher = publisher;
     }
 
-    public async Task<Unit> Handle(MarkTaskAsCompletedCommand request, CancellationToken cancellationToken)
+    public async Task Handle(MarkTaskAsCompletedCommand request, CancellationToken cancellationToken)
     {
         var task = await _taskRepository.GetByIdAsync(request.Id);
         if (task == null)
         {
             // Or throw an exception
-            return Unit.Value;
+            return;
         }
 
         task.MarkAsCompleted();
@@ -36,6 +36,6 @@ public class MarkTaskAsCompletedCommandHandler : IRequestHandler<MarkTaskAsCompl
 
         task.ClearDomainEvents();
 
-        return Unit.Value;
+        return;
     }
 }

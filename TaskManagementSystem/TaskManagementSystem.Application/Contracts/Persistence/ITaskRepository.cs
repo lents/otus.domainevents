@@ -7,9 +7,9 @@ namespace TaskManagementSystem.Application.Contracts.Persistence;
 
 public interface ITaskRepository
 {
-    Task<Task> GetByIdAsync(Guid id);
-    Task<IReadOnlyList<Task>> GetAllAsync();
-    Task AddAsync(Task entity);
-    Task UpdateAsync(Task entity);
-    Task DeleteAsync(Task entity);
+    Task<TaskDto> GetByIdAsync(Guid id);
+    Task<IReadOnlyList<TaskDto>> GetAllAsync();
+    Task AddAsync(TaskDto entity);
+    Task UpdateAsync(TaskDto entity);
+    Task DeleteAsync(TaskDto entity);
 }

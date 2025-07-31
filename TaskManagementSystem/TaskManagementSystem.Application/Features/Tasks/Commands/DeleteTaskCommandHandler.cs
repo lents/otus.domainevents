@@ -38,4 +38,9 @@ public class DeleteTaskCommandHandler : IRequestHandler<DeleteTaskCommand>
 
         return Unit.Value;
     }
+
+    Task IRequestHandler<DeleteTaskCommand>.Handle(DeleteTaskCommand request, CancellationToken cancellationToken)
+    {
+        return Handle(request, cancellationToken);
+    }
 }
